@@ -1,0 +1,175 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Anushka 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  background:linear-gradient(135deg,#ffd6e8,#fff0f7,#ffe6f0);
+  overflow:hidden;
+}
+
+.page{
+  position:absolute;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:24px;
+}
+.page.active{display:flex}
+
+.card{
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(14px);
+  border-radius:26px;
+  padding:34px 28px;
+  max-width:380px;
+  box-shadow:0 30px 60px rgba(255,105,180,.2);
+}
+
+h1{font-size:26px;color:#c9184a;margin-bottom:12px}
+p{font-size:16px;color:#5a2a3c;line-height:1.6}
+
+.tap{
+  margin-top:18px;
+  font-size:13px;
+  opacity:.6;
+}
+
+.big{
+  font-size:30px;
+  font-weight:700;
+  color:#b0004e;
+}
+
+/* floating emojis */
+.float{
+  position:fixed;
+  bottom:-20px;
+  font-size:20px;
+  animation:floatUp linear forwards;
+}
+@keyframes floatUp{
+  from{transform:translateY(0)}
+  to{transform:translateY(-120vh)}
+}
+</style>
+</head>
+
+<body onclick="nextPage()">
+
+<audio id="music" loop playsinline>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <div class="card">
+    <h1>Hey Anushka 👀</h1>
+    <p>I made something random…<br>but maybe it's not that random.</p>
+    <div class="tap">(tap anywhere)</div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <div class="card">
+    <p>I don't know when it started…<br>but talking to you just feels different.</p>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <div class="card">
+    <p>
+      Maybe it's your smile,<br>
+      maybe it's your vibe…<br>
+      or maybe I'm just getting a little too attached 😌
+    </p>
+  </div>
+</div>
+
+<!-- PAGE 4 (FUNNY) -->
+<div class="page">
+  <div class="card">
+    <p>
+      Okay wait… serious baat baad me 😭<br><br>
+      how are you this cute??<br>
+      illegal hona chahiye ye 🥲
+    </p>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+  <div class="card">
+    <p>
+      I tried to ignore it…<br><br>
+      but har baar tera naam aata hai,<br>
+      toh stupid si smile aa jaati hai 😭
+    </p>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+  <div class="card">
+    <p>
+      I don't wanna rush anything…<br>
+      but I do wanna say this --<br><br>
+      <strong>I like you ❤️</strong>
+    </p>
+  </div>
+</div>
+
+<!-- PAGE 7 FINAL -->
+<div class="page">
+  <div class="card">
+    <div class="big">Ma timilai maya garchu ❤️</div>
+    <p style="margin-top:10px;">-- Luvv</p>
+  </div>
+</div>
+
+<script>
+let pages=document.querySelectorAll('.page');
+let current=0;
+let music=document.getElementById('music');
+let started=false;
+
+function nextPage(){
+  if(!started){
+    music.volume=0.3;
+    music.play().catch(()=>{});
+    started=true;
+  }
+
+  if(current < pages.length-1){
+    pages[current].classList.remove('active');
+    current++;
+    pages[current].classList.add('active');
+  }
+}
+
+/* floating emojis */
+const emojis=["💗","🎀","✨","🌸","🥺"];
+setInterval(()=>{
+  const e=document.createElement("div");
+  e.className="float";
+  e.innerText=emojis[Math.floor(Math.random()*emojis.length)];
+  e.style.left=Math.random()*100+"vw";
+  e.style.animationDuration=(4+Math.random()*4)+"s";
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),8000);
+},500);
+</script>
+
+</body>
+</html>
