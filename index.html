@@ -3,172 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Anushka 💗</title>
+<title>For Shilpa ❤️</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-
-body{
-  background:linear-gradient(135deg,#ffd6e8,#fff0f7,#ffe6f0);
-  overflow:hidden;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
-.page{
-  position:absolute;
-  inset:0;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:24px;
-}
-.page.active{display:flex}
-
-.card{
-  background:rgba(255,255,255,0.75);
-  backdrop-filter:blur(14px);
-  border-radius:26px;
-  padding:34px 28px;
-  max-width:380px;
-  box-shadow:0 30px 60px rgba(255,105,180,.2);
+.container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
 }
 
-h1{font-size:26px;color:#c9184a;margin-bottom:12px}
-p{font-size:16px;color:#5a2a3c;line-height:1.6}
-
-.tap{
-  margin-top:18px;
-  font-size:13px;
-  opacity:.6;
+h1 {
+  font-size: 32px;
 }
 
-.big{
-  font-size:30px;
-  font-weight:700;
-  color:#b0004e;
+p {
+  font-size: 18px;
+  margin-top: 15px;
 }
 
-/* floating emojis */
-.float{
-  position:fixed;
-  bottom:-20px;
-  font-size:20px;
-  animation:floatUp linear forwards;
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: #ff4d6d;
+  font-size: 16px;
+  cursor: pointer;
 }
-@keyframes floatUp{
-  from{transform:translateY(0)}
-  to{transform:translateY(-120vh)}
+
+.page {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* floating hearts */
+.heart {
+  position: absolute;
+  color: rgba(255,255,255,0.7);
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% {transform: translateY(100vh);}
+  100% {transform: translateY(-10vh);}
 }
 </style>
 </head>
 
-<body onclick="nextPage()">
+<body>
 
-<audio id="music" loop playsinline>
+<!-- MUSIC -->
+<audio id="music" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<!-- PAGE 1 -->
-<div class="page active">
-  <div class="card">
-    <h1>Hey Anushka 👀</h1>
-    <p>I made something random…<br>but maybe it's not that random.</p>
-    <div class="tap">(tap anywhere)</div>
-  </div>
-</div>
+<div class="container">
 
-<!-- PAGE 2 -->
-<div class="page">
-  <div class="card">
-    <p>I don't know when it started…<br>but talking to you just feels different.</p>
+  <!-- PAGE 1 -->
+  <div class="page active">
+    <h1>Hey Shilpa ❤️</h1>
+    <p>Aaj kuch important bolna hai…</p>
+    <button onclick="nextPage()">Next ➡️</button>
   </div>
-</div>
 
-<!-- PAGE 3 -->
-<div class="page">
-  <div class="card">
-    <p>
-      Maybe it's your smile,<br>
-      maybe it's your vibe…<br>
-      or maybe I'm just getting a little too attached 😌
+  <!-- PAGE 2 -->
+  <div class="page">
+    <p>Tu Dilli wali hai… full attitude 😏</p>
+    <p>Par kya karu… dil wahi atak gaya ❤️</p>
+    <button onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="page">
+    <p>Haan hum ladte bahut hai…</p>
+    <p>Par sach ye hai… farak bhi sabse zyada tujhse hi padta hai 🥺</p>
+    <button onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="page">
+    <p>Dekho Shilpa… ladai habit ho sakti hai</p>
+    <p>Par tu meri choice hai ❤️</p>
+    <button onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <!-- PAGE 5 -->
+  <div class="page">
+    <p>Mujhe perfect relationship nahi chahiye…</p>
+    <p>Mujhe tu chahiye -- thodi pagal, thodi gusse wali 😌</p>
+    <button onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <!-- PAGE 6 -->
+  <div class="page">
+    <p>Tu gussa hoti hai na… tab bhi cute lagti hai 😭</p>
+    <p>Bas main thoda stupid hu… manaana seekh raha hu ❤️</p>
+    <button onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <!-- PAGE 7 FINAL -->
+  <div class="page">
+    <h1>Final baat… 💌</h1>
+    <p>Main tujhe lose nahi karna chahta…</p>
+    <p>Chahe hum kitna bhi ladein… end me mujhe tu hi chahiye ❤️</p>
+    <p>Tu meri habit nahi… meri aadat ban chuki hai ❤️</p>
+
+    <h2 style="margin-top:25px;">
+      I Love You Shilpa ❤️
+    </h2>
+
+    <p style="margin-top:10px; font-size:14px;">
+      (Aur haan… ye baar baar bolunga 😌)
     </p>
   </div>
-</div>
 
-<!-- PAGE 4 (FUNNY) -->
-<div class="page">
-  <div class="card">
-    <p>
-      Okay wait… serious baat baad me 😭<br><br>
-      how are you this cute??<br>
-      illegal hona chahiye ye 🥲
-    </p>
-  </div>
-</div>
-
-<!-- PAGE 5 -->
-<div class="page">
-  <div class="card">
-    <p>
-      I tried to ignore it…<br><br>
-      but har baar tera naam aata hai,<br>
-      toh stupid si smile aa jaati hai 😭
-    </p>
-  </div>
-</div>
-
-<!-- PAGE 6 -->
-<div class="page">
-  <div class="card">
-    <p>
-      I don't wanna rush anything…<br>
-      but I do wanna say this --<br><br>
-      <strong>I like you ❤️</strong>
-    </p>
-  </div>
-</div>
-
-<!-- PAGE 7 FINAL -->
-<div class="page">
-  <div class="card">
-    <div class="big">Ma timilai maya garchu ❤️</div>
-    <p style="margin-top:10px;">-- Luvv</p>
-  </div>
 </div>
 
 <script>
-let pages=document.querySelectorAll('.page');
-let current=0;
-let music=document.getElementById('music');
-let started=false;
+let pages = document.querySelectorAll('.page');
+let current = 0;
+let music = document.getElementById("music");
+let started = false;
 
-function nextPage(){
+function nextPage() {
   if(!started){
-    music.volume=0.3;
+    music.volume = 0.3;
     music.play().catch(()=>{});
-    started=true;
+    started = true;
   }
 
-  if(current < pages.length-1){
-    pages[current].classList.remove('active');
-    current++;
+  pages[current].classList.remove('active');
+  current++;
+  if (current < pages.length) {
     pages[current].classList.add('active');
   }
 }
 
-/* floating emojis */
-const emojis=["💗","🎀","✨","🌸","🥺"];
-setInterval(()=>{
-  const e=document.createElement("div");
-  e.className="float";
-  e.innerText=emojis[Math.floor(Math.random()*emojis.length)];
-  e.style.left=Math.random()*100+"vw";
-  e.style.animationDuration=(4+Math.random()*4)+"s";
-  document.body.appendChild(e);
-  setTimeout(()=>e.remove(),8000);
-},500);
+// hearts animation
+setInterval(() => {
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}, 300);
 </script>
 
 </body>
