@@ -3,170 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Shilpa ❤️</title>
+<title>...</title>
 
 <style>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  color: white;
-  text-align: center;
-  overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+
+body{
+  background:#0b0b0b;
+  color:#e5e5e5;
+  overflow:hidden;
 }
 
-.container {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 20px;
+.page{
+  position:absolute;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
 }
 
-h1 {
-  font-size: 32px;
+.page.active{display:flex}
+
+.card{
+  max-width:420px;
+  opacity:0.9;
 }
 
-p {
-  font-size: 18px;
-  margin-top: 15px;
+h1{
+  font-size:26px;
+  margin-bottom:20px;
+  font-weight:400;
 }
 
-button {
-  margin-top: 25px;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  background: white;
-  color: #ff4d6d;
-  font-size: 16px;
-  cursor: pointer;
+p{
+  font-size:16px;
+  line-height:1.8;
+  color:#cfcfcf;
 }
 
-.page {
-  display: none;
+.tap{
+  margin-top:25px;
+  font-size:12px;
+  opacity:0.4;
 }
 
-.active {
-  display: block;
+/* subtle floating particles */
+.dot{
+  position:fixed;
+  width:2px;
+  height:2px;
+  background:white;
+  opacity:0.2;
+  animation:float 10s linear infinite;
 }
 
-/* floating hearts */
-.heart {
-  position: absolute;
-  color: rgba(255,255,255,0.7);
-  animation: float 6s linear infinite;
-}
-
-@keyframes float {
-  0% {transform: translateY(100vh);}
-  100% {transform: translateY(-10vh);}
+@keyframes float{
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-10vh);}
 }
 </style>
 </head>
 
-<body>
+<body onclick="nextPage()">
 
-<!-- MUSIC -->
-<audio id="music" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-
-<div class="container">
-
-  <!-- PAGE 1 -->
-  <div class="page active">
-    <h1>Hey Shilpa ❤️</h1>
-    <p>Aaj kuch important bolna hai…</p>
-    <button onclick="nextPage()">Next ➡️</button>
+<!-- PAGE 1 -->
+<div class="page active">
+  <div class="card">
+    <h1>I don't know who will read this…</h1>
+    <p>maybe no one, maybe everyone.</p>
+    <div class="tap">(tap)</div>
   </div>
+</div>
 
-  <!-- PAGE 2 -->
-  <div class="page">
-    <p>Tu Dilli wali hai… full attitude 😏</p>
-    <p>Par kya karu… dil wahi atak gaya ❤️</p>
-    <button onclick="nextPage()">Next ➡️</button>
-  </div>
-
-  <!-- PAGE 3 -->
-  <div class="page">
-    <p>Haan hum ladte bahut hai…</p>
-    <p>Par sach ye hai… farak bhi sabse zyada tujhse hi padta hai 🥺</p>
-    <button onclick="nextPage()">Next ➡️</button>
-  </div>
-
-  <!-- PAGE 4 -->
-  <div class="page">
-    <p>Dekho Shilpa… ladai habit ho sakti hai</p>
-    <p>Par tu meri choice hai ❤️</p>
-    <button onclick="nextPage()">Next ➡️</button>
-  </div>
-
-  <!-- PAGE 5 -->
-  <div class="page">
-    <p>Mujhe perfect relationship nahi chahiye…</p>
-    <p>Mujhe tu chahiye -- thodi pagal, thodi gusse wali 😌</p>
-    <button onclick="nextPage()">Next ➡️</button>
-  </div>
-
-  <!-- PAGE 6 -->
-  <div class="page">
-    <p>Tu gussa hoti hai na… tab bhi cute lagti hai 😭</p>
-    <p>Bas main thoda stupid hu… manaana seekh raha hu ❤️</p>
-    <button onclick="nextPage()">Next ➡️</button>
-  </div>
-
-  <!-- PAGE 7 FINAL -->
-  <div class="page">
-    <h1>Final baat… 💌</h1>
-    <p>Main tujhe lose nahi karna chahta…</p>
-    <p>Chahe hum kitna bhi ladein… end me mujhe tu hi chahiye ❤️</p>
-    <p>Tu meri habit nahi… meri aadat ban chuki hai ❤️</p>
-
-    <h2 style="margin-top:25px;">
-      I Love You Shilpa ❤️
-    </h2>
-
-    <p style="margin-top:10px; font-size:14px;">
-      (Aur haan… ye baar baar bolunga 😌)
+<!-- PAGE 2 -->
+<div class="page">
+  <div class="card">
+    <p>
+      I used to feel seen…<br>
+      like I mattered somewhere.
     </p>
+    <div class="tap">(tap)</div>
   </div>
+</div>
 
+<!-- PAGE 3 -->
+<div class="page">
+  <div class="card">
+    <p>
+      But lately…<br>
+      it feels like I'm just there.<br>
+      Not important… not missed.
+    </p>
+    <div class="tap">(tap)</div>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+  <div class="card">
+    <p>
+      Maybe it's because I changed…<br>
+      or maybe I just stopped being enough.
+    </p>
+    <div class="tap">(tap)</div>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+  <div class="card">
+    <p>
+      When everything was good,<br>
+      people stayed.<br><br>
+      When things went down…<br>
+      so did they.
+    </p>
+    <div class="tap">(tap)</div>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+  <div class="card">
+    <p>
+      I didn't ask for much…<br>
+      just a little presence,<br>
+      a little understanding.
+    </p>
+    <div class="tap">(tap)</div>
+  </div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page">
+  <div class="card">
+    <p>
+      But I guess…<br>
+      I became easy to ignore.
+    </p>
+    <div class="tap">(tap)</div>
+  </div>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page">
+  <div class="card">
+    <p>
+      The worst part isn't being alone…<br>
+      it's realizing<br>
+      no one even notices.
+    </p>
+    <div class="tap">(tap)</div>
+  </div>
+</div>
+
+<!-- PAGE 9 FINAL -->
+<div class="page">
+  <div class="card">
+    <h1>I'm still here…</h1>
+    <p>just quieter now.</p>
+    <h1 style="margin-top:20px;">💔</h1>
+  </div>
 </div>
 
 <script>
-let pages = document.querySelectorAll('.page');
-let current = 0;
-let music = document.getElementById("music");
-let started = false;
+let pages=document.querySelectorAll('.page');
+let current=0;
 
-function nextPage() {
-  if(!started){
-    music.volume = 0.3;
-    music.play().catch(()=>{});
-    started = true;
-  }
-
-  pages[current].classList.remove('active');
-  current++;
-  if (current < pages.length) {
+function nextPage(){
+  if(current < pages.length-1){
+    pages[current].classList.remove('active');
+    current++;
     pages[current].classList.add('active');
   }
 }
 
-// hearts animation
-setInterval(() => {
-  let heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = "❤️";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = (Math.random() * 20 + 10) + "px";
-  document.body.appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 6000);
-}, 300);
+/* subtle particles */
+setInterval(()=>{
+  let d=document.createElement("div");
+  d.className="dot";
+  d.style.left=Math.random()*100+"vw";
+  d.style.animationDuration=(6+Math.random()*6)+"s";
+  document.body.appendChild(d);
+  setTimeout(()=>d.remove(),10000);
+},300);
 </script>
 
 </body>
