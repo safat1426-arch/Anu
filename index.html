@@ -3,19 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>...</title>
+<title>For Anushka 💗</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 
 body{
-  background:#0b0b0b;
-  color:#e5e5e5;
+  background:radial-gradient(circle at top,#ff9ecf,#ff4da6,#2b002b);
   overflow:hidden;
+  color:white;
 }
 
+/* glowing border frame */
+body::before{
+  content:"";
+  position:fixed;
+  inset:10px;
+  border-radius:25px;
+  border:2px solid rgba(255,255,255,0.2);
+  box-shadow:
+    0 0 20px #ff4da6,
+    0 0 40px #ff1a75,
+    inset 0 0 20px rgba(255,255,255,0.1);
+  pointer-events:none;
+}
+
+/* pages */
 .page{
   position:absolute;
   inset:0;
@@ -23,47 +38,62 @@ body{
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:30px;
+  padding:25px;
 }
-
 .page.active{display:flex}
 
+/* premium card */
 .card{
-  max-width:420px;
-  opacity:0.9;
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(25px);
+  border-radius:30px;
+  padding:40px 28px;
+  max-width:400px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+  animation:fadeIn .6s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:scale(.95)}
+  to{opacity:1; transform:scale(1)}
 }
 
 h1{
   font-size:26px;
-  margin-bottom:20px;
-  font-weight:400;
+  margin-bottom:12px;
+  color:#ffd6eb;
 }
 
 p{
   font-size:16px;
-  line-height:1.8;
-  color:#cfcfcf;
+  line-height:1.7;
+  opacity:.95;
 }
 
 .tap{
-  margin-top:25px;
+  margin-top:18px;
   font-size:12px;
-  opacity:0.4;
+  opacity:.6;
 }
 
-/* subtle floating particles */
-.dot{
+/* floating hearts */
+.heart{
   position:fixed;
-  width:2px;
-  height:2px;
-  background:white;
-  opacity:0.2;
-  animation:float 10s linear infinite;
+  bottom:-20px;
+  font-size:18px;
+  animation:floatUp linear forwards;
+}
+@keyframes floatUp{
+  from{transform:translateY(0)}
+  to{transform:translateY(-120vh)}
 }
 
-@keyframes float{
-  from{transform:translateY(100vh);}
-  to{transform:translateY(-10vh);}
+/* glowing text */
+.big{
+  font-size:30px;
+  font-weight:700;
+  color:#ffb3d9;
+  text-shadow:0 0 10px #ff4da6,0 0 20px #ff1a75;
 }
 </style>
 </head>
@@ -73,102 +103,67 @@ p{
 <!-- PAGE 1 -->
 <div class="page active">
   <div class="card">
-    <h1>I don't know who will read this…</h1>
-    <p>maybe no one, maybe everyone.</p>
-    <div class="tap">(tap)</div>
+    <h1>Hey Anushka 👀</h1>
+    <p>Please panic mat hona 😭<br>ye koi viva nahi hai</p>
+    <div class="tap">(tap anywhere)</div>
   </div>
 </div>
 
 <!-- PAGE 2 -->
-<div class="page">
-  <div class="card">
-    <p>
-      I used to feel seen…<br>
-      like I mattered somewhere.
-    </p>
-    <div class="tap">(tap)</div>
-  </div>
-</div>
+<div class="page"><div class="card">
+<p>Main 2 min se soch raha tha kaise start karu…<br>abhi bhi nahi pata 😭</p>
+<div class="tap">(tap anywhere)</div>
+</div></div>
 
 <!-- PAGE 3 -->
-<div class="page">
-  <div class="card">
-    <p>
-      But lately…<br>
-      it feels like I'm just there.<br>
-      Not important… not missed.
-    </p>
-    <div class="tap">(tap)</div>
-  </div>
-</div>
+<div class="page"><div class="card">
+<p>Tu thodi zyada hi achhi hai 😭<br>thoda balance rakha kar</p>
+<div class="tap">(tap anywhere)</div>
+</div></div>
 
 <!-- PAGE 4 -->
-<div class="page">
-  <div class="card">
-    <p>
-      Maybe it's because I changed…<br>
-      or maybe I just stopped being enough.
-    </p>
-    <div class="tap">(tap)</div>
-  </div>
-</div>
+<div class="page"><div class="card">
+<p>Practice bhi kar li hai maine 😭<br><br>
+<strong>Anushka Khadka</strong><br>
+(marks mat kaatna please 😭)</p>
+<div class="tap">(tap anywhere)</div>
+</div></div>
 
 <!-- PAGE 5 -->
-<div class="page">
-  <div class="card">
-    <p>
-      When everything was good,<br>
-      people stayed.<br><br>
-      When things went down…<br>
-      so did they.
-    </p>
-    <div class="tap">(tap)</div>
-  </div>
-</div>
+<div class="page"><div class="card">
+<p>Jab tera naam aata hai…<br>system hang ho jata hai 😭💀</p>
+<div class="tap">(tap anywhere)</div>
+</div></div>
 
 <!-- PAGE 6 -->
-<div class="page">
-  <div class="card">
-    <p>
-      I didn't ask for much…<br>
-      just a little presence,<br>
-      a little understanding.
-    </p>
-    <div class="tap">(tap)</div>
-  </div>
-</div>
+<div class="page"><div class="card">
+<p>I don't know kab hua…<br>but tu alag feel hoti hai 🥺</p>
+<div class="tap">(tap anywhere)</div>
+</div></div>
 
 <!-- PAGE 7 -->
-<div class="page">
-  <div class="card">
-    <p>
-      But I guess…<br>
-      I became easy to ignore.
-    </p>
-    <div class="tap">(tap)</div>
-  </div>
-</div>
+<div class="page"><div class="card">
+<p>Main shayar nahi hu…<br>par tere baare me zyada sochne lag gaya hu 😭</p>
+<div class="tap">(tap anywhere)</div>
+</div></div>
 
 <!-- PAGE 8 -->
-<div class="page">
-  <div class="card">
-    <p>
-      The worst part isn't being alone…<br>
-      it's realizing<br>
-      no one even notices.
-    </p>
-    <div class="tap">(tap)</div>
-  </div>
-</div>
+<div class="page"><div class="card">
+<p>I like you…<br>thoda nahi… thoda zyada 😭❤️</p>
+<div class="tap">(tap anywhere)</div>
+</div></div>
 
-<!-- PAGE 9 FINAL -->
-<div class="page">
-  <div class="card">
-    <h1>I'm still here…</h1>
-    <p>just quieter now.</p>
-    <h1 style="margin-top:20px;">💔</h1>
-  </div>
-</div>
+<!-- PAGE 9 -->
+<div class="page"><div class="card">
+<p>Agar tu bole no…<br>to main drama nahi karunga 😌<br>bas sad music sun lunga</p>
+<div class="tap">(tap anywhere)</div>
+</div></div>
+
+<!-- PAGE 10 -->
+<div class="page"><div class="card">
+<div class="big">Ma timilai maya garchu ❤️</div>
+<p style="margin-top:10px;">-- Luvv</p>
+</div></div>
 
 <script>
 let pages=document.querySelectorAll('.page');
@@ -182,15 +177,17 @@ function nextPage(){
   }
 }
 
-/* subtle particles */
+/* floating hearts */
+const hearts=["💗","💖","💕","💘","🌸"];
 setInterval(()=>{
-  let d=document.createElement("div");
-  d.className="dot";
-  d.style.left=Math.random()*100+"vw";
-  d.style.animationDuration=(6+Math.random()*6)+"s";
-  document.body.appendChild(d);
-  setTimeout(()=>d.remove(),10000);
-},300);
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerText=hearts[Math.floor(Math.random()*hearts.length)];
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(5+Math.random()*5)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),9000);
+},400);
 </script>
 
 </body>
